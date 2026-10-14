@@ -69,7 +69,7 @@
   <rect x="24" y="370" width="1232" height="158" class="layer" fill="#fff7ed" stroke="#f97316"/>
   <text x="48" y="404" class="layer-title">元数据知识库构建层</text>
   <rect x="66" y="434" width="190" height="58" class="box" stroke="#f97316"/>
-  <text x="161" y="458" text-anchor="middle" class="box-title">教学数仓 MySQL</text>
+  <text x="161" y="458" text-anchor="middle" class="box-title">示例数仓 MySQL</text>
   <text x="161" y="480" text-anchor="middle" class="box-text">fact / dim 原始表</text>
   <rect x="306" y="434" width="220" height="58" class="box" stroke="#f97316"/>
   <text x="416" y="458" text-anchor="middle" class="box-title">meta_config.yaml</text>
@@ -182,7 +182,7 @@
   <path class="arrow-slate arrow-dash" d="M 979 622 C 982 735 985 805 987 858"/>
   <path class="arrow-slate arrow-dash" d="M 1159 756 C 1158 805 1157 835 1157 858"/>
 
-  <text x="58" y="538" class="small">构建链路：从教学数仓读取表结构和值域，根据配置写入 Meta MySQL、Qdrant 和 Elasticsearch</text>
+  <text x="58" y="538" class="small">构建链路：从示例数仓读取表结构和值域，根据配置写入 Meta MySQL、Qdrant 和 Elasticsearch</text>
   <text x="58" y="790" class="small">查询链路：Jieba 先抽取关键词；LangChain/LLM 扩展检索词和生成 SQL；SQLAlchemy 校验执行；自定义 stream 事件推给 SSE</text>
   <text x="58" y="934" class="small">工程依赖：后端用 uv 管理 Python 环境，前端用 pnpm 管理依赖，基础服务可通过 Docker Compose 启动</text>
 </svg>

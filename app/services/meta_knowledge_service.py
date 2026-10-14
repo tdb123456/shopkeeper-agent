@@ -43,7 +43,7 @@ class MetaKnowledgeService:
     ):
         # meta repository 负责结构化元数据的落库
         self.meta_mysql_repository: MetaMySQLRepository = meta_mysql_repository
-        # dw repository 负责到教学数仓中读取真实表结构和示例值
+        # dw repository 负责到示例数仓中读取真实表结构和示例值
         self.dw_mysql_repository: DWMySQLRepository = dw_mysql_repository
         # 字段向量集合的创建和写入统一交给 Qdrant Repository
         self.column_qdrant_repository: ColumnQdrantRepository = column_qdrant_repository

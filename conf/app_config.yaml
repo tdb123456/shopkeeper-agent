@@ -12,15 +12,15 @@ logging:
 db_meta:
   host: localhost
   port: 3306
-  user: didilili
-  password: dili123
+  user: shopkeeper
+  password: shopkeeper_dev
   database: meta
 
 db_dw:
   host: localhost
   port: 3306
-  user: didilili
-  password: dili123
+  user: shopkeeper
+  password: shopkeeper_dev
   database: dw
 
 qdrant:

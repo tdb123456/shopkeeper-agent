@@ -61,7 +61,7 @@
 | 向量数据库 | Qdrant | 字段 / 指标语义向量检索 |
 | 全文检索 | Elasticsearch（IK 分词） | 字段取值全文检索 |
 | 向量化服务 | TEI + `BAAI/bge-large-zh-v1.5` | 中文文本向量化（1024 维） |
-| 数据库 | MySQL 8.0 | 教学数仓 `dw` + 元数据库 `meta` |
+| 数据库 | MySQL 8.0 | 示例数仓 `dw` + 元数据库 `meta` |
 | ORM | SQLAlchemy | 元数据库与数仓数据访问 |
 | 中文分词 | jieba（TF-IDF） | 问题关键词抽取 |
 | 配置 | OmegaConf + YAML | 分层配置与环境变量替换 |
@@ -147,6 +147,8 @@ docker compose -f docker/docker-compose.yaml up -d
 
 `docker/mysql/dw.sql` 和 `docker/mysql/meta.sql` 会在 MySQL 容器首次启动时自动初始化数仓与元数据库。
 
+默认数据库账号为 `shopkeeper`，密码为 `shopkeeper_dev`，仅用于本地开发。已有 MySQL 数据卷不会重新执行初始化脚本；升级已有部署时，请在 `conf/app_config.yaml` 中保留现有连接账号和密码，或先创建新账号并授予 `dw`、`meta` 数据库权限。
+
 | 服务 | 端口 |
 | --- | --- |
 | MySQL | `3306` |
@@ -202,7 +204,7 @@ pnpm dev
 | `result` | 最终 SQL 与查询结果 |
 | `error` | 异常信息 |
 
-## 教学数据说明
+## 示例数据说明
 
 数仓 `dw` 采用星型模型，包含一张事实表和四张维度表：
 
@@ -231,28 +233,6 @@ pnpm dev
 | 生成 SQL | 大模型基于完整上下文生成查询语句 |
 | 校验 / 纠错 | `EXPLAIN` 预检查，失败时带报错信息重写 |
 | 执行 SQL | 校验通过后在数仓执行并返回结果 |
-
-## 分阶段分支
-
-仓库保留了按构建阶段划分的分支，便于逐步查看工程是如何演进的：
-
-| 分支 | 阶段 |
-| --- | --- |
-| `03-env-services` | 开发环境与基础服务 |
-| `04-structure-config` | 项目结构与配置管理 |
-| `05-qdrant-es` | Qdrant 与 ES 接入 |
-| `06-embedding-mysql-logging` | Embedding、MySQL 与日志 |
-| `07-metadata-base-overview` | 元数据知识库总览 |
-| `08-metadata-table-column-sync` | 表与字段同步 |
-| `09-metadata-retrieval-capability` | 字段与指标检索能力 |
-| `10-agent-overview-workflow` | 问数智能体骨架 |
-| `11-agent-keyword-multi-recall` | 关键词抽取与多路召回 |
-| `12-agent-merge-retrievals` | 召回信息合并 |
-| `13-agent-filter-extra-context` | 过滤与上下文补全 |
-| `14-agent-sql-loop` | SQL 生成与执行闭环 |
-| `15-api-streaming-basics` | FastAPI 与流式基础 |
-| `16-api-query-service` | 查询接口与依赖组装 |
-| `17-api-integration-logging` | 前后端联调与日志追踪 |
 
 ## 可扩展方向
 
