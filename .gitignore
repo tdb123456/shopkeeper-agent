@@ -47,6 +47,7 @@ speed-measure-plugin*.json
 /.sass-cache
 /connect.lock
 /coverage
+/logs/
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
