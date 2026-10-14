@@ -12,6 +12,12 @@
 ![Stars](https://img.shields.io/github/stars/didilili/shopkeeper-agent?logo=github&style=flat)
 [![Read Online](https://img.shields.io/badge/在线教程-点击访问-blue?logo=bookstack)](https://didilili.github.io/ai-agents-from-zero/#/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%95%86%E9%97%AE%E6%95%B0/0-%E5%89%8D%E8%A8%80)
 
+[快速开始](#quick-start) • [项目亮点](#features) • [系统架构](#architecture) • [配套教程](#tutorials) • [加入社群](#community)
+
+  <p>
+    <a href="https://didilili.github.io/ai-agents-from-zero/#/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%95%86%E9%97%AE%E6%95%B0/0-%E5%89%8D%E8%A8%80">📚 在线阅读</a>
+  </p>
+
 </div>
 
 **📢 说明**：本套实战项目已更新完成，配套教程、章节分支和前后端代码均可对照学习。
@@ -25,6 +31,8 @@
 
 ![电商问数前端首页：样例问题、自然语言输入和智能数据分析 Agent 界面](docs/images/shopkeeper-agent-home.jpg)
 
+<a id="project-introduction"></a>
+
 ## 📖 项目介绍
 
 在真实问数场景里，业务同学通常不会写 SQL，数据分析同学也很难随时记住所有表结构、字段含义、指标口径和字段取值。单纯把自然语言问题直接交给大模型，很容易出现表选错、字段选错、指标理解错和 SQL 幻觉等问题。
@@ -36,6 +44,8 @@
 - 大模型基于上下文进行分步推理
 - 生成 SQL 并查询数据仓库
 - 以流式方式返回分析结果
+
+<a id="features"></a>
 
 ## ✨ 项目亮点
 
@@ -62,6 +72,8 @@
 - 想把 `MySQL`、`Qdrant`、`Elasticsearch` 和大模型放到同一个业务场景里理解。
 - 想做一个比简单模型调用更接近实际开发的 AI Agent 项目。
 - 想把项目写进简历，并且能说清楚数据层、检索层、智能体层、服务层和前端层分别做了什么。
+
+<a id="architecture"></a>
 
 ## 🏗️ 系统架构
 
@@ -116,6 +128,8 @@ shopkeeper-agent/
 ├── main.py               # FastAPI 应用入口
 └── pyproject.toml        # Python 项目依赖与工具配置
 ```
+
+<a id="quick-start"></a>
 
 ## 🚀 快速开始
 
@@ -247,6 +261,18 @@ cp .env.example .env
 VITE_DEV_PROXY_TARGET=http://127.0.0.1:8000
 ```
 
+<a id="community"></a>
+
+## 💬 加入社群
+
+想和更多朋友聊聊 **AI 编程、Vibe Coding、面试经验，顺便 吹水唠嗑、吐槽老板**？欢迎加入「**全宇宙最有爱的 AI Agent 交流群 —— 胡思妙想研究所**」！🎉
+
+👉 [猛击这里！申请入所](https://github.com/didilili/ai-agents-from-zero/issues/46)：在申请帖留言，并按帖内说明添加微信。
+
+愿我们在这里少一点焦虑，多一点灵感；少一点单打独斗，多一点一起胡思妙想～
+
+<a id="tutorials"></a>
+
 ## 📚 配套教程目录
 
 教程总入口：[电商问数完整教程](https://didilili.github.io/ai-agents-from-zero/#/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%95%86%E9%97%AE%E6%95%B0/0-%E5%89%8D%E8%A8%80)
@@ -296,3 +322,7 @@ git checkout main
 - 更复杂的多轮问数记忆、追问改写和会话管理
 
 这些能力适合在基础流程跑通之后继续扩展。`shopkeeper-agent` 更适合承担一个清晰角色：先把智能问数最关键、最必要、最值得学习的工程链路讲清楚、跑起来，并为后续扩展企业级能力打基础。
+
+## ⭐ Star History
+
+![Star History Chart](https://api.star-history.com/image?repos=didilili/shopkeeper-agent&type=date&legend=top-left)
